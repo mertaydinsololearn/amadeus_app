@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const flightsApi = createApi({
 	reducerPath: 'flights',
 	baseQuery: fetchBaseQuery({
-        baseUrl: 'process.env.REACT_APP_API_URL',
+        baseUrl: process.env.REACT_APP_API_URL,
 		fetchFn: async (...args) => {
 			return fetch(...args);
 		}
